@@ -1,9 +1,9 @@
 import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from model import load_data
-from utils import load_model
-from evaluate import evaluate_model
+from model import load_data  # noqa: E402
+from utils import load_model  # noqa: E402
+from evaluate import evaluate_model  # noqa: E402
 
 
 def test_evaluate_model():

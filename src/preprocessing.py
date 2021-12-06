@@ -1,7 +1,6 @@
 """Process the protein sequence into specified data format for modeling.
 """
 import pickle
-import numpy as np
 import pandas as pd
 from utils import encode_data
 
@@ -11,7 +10,7 @@ def set_length_limit(df, length_limit=40, verbose=True):
 
     Args:
         df (dataframe): dataframe of protein sequence
-        length_limit (int, optional): specified protein length limit. 
+        length_limit (int, optional): specified protein length limit.
             Defaults to 40.
 
     Returns:
@@ -72,8 +71,8 @@ def clean_ordered_sequence(infile_ordered_1, infile_ordered_2):
     return df_ordered
 
 
-def save_processed_data(array_ordered, labels_ordered, 
-        array_disordered, labels_disordered):
+def save_processed_data(array_ordered, labels_ordered,
+                        array_disordered, labels_disordered):
     """Save the processed data in a pickle format.
 
     Args:
