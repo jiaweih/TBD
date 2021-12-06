@@ -139,14 +139,14 @@ def fit_model(X_train, X_test, y_train, y_test):
     return model
 
 
-def main():
-    """Main.
-    """
-    infile = "../data/protein_processed_data.pkl"
-    X_train, X_test, y_train, y_test = load_data(infile)
-    model = fit_model(X_train, X_test, y_train, y_test)
-    model.save('fitted_model')
+# def main():
+#     """Main.
+#     """
+#     infile = "../data/protein_processed_data.pkl"
+#     X_train, X_test, y_train, y_test = load_data(infile)
+#     model = fit_model(X_train, X_test, y_train, y_test)
+#     model.save('fitted_model')
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
