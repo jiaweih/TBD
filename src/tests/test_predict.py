@@ -3,7 +3,8 @@ import numpy as np
 import pandas as pd
 import os
 import sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 
+    '..')))
 from predict import features_as_df, transform_data, predict_protein
 
 
@@ -11,7 +12,8 @@ from predict import features_as_df, transform_data, predict_protein
 def example_data():
     sequences = [
         "LLGDFFRKSKEKIGKEFKRIVQRIKDFLRNLVPRTES",
-        "MDAQTRRRERRAEKQAQWKAANPLLVGVSAKPVNRPILSLNRKPKSRVESALNPIDLTVLAEYHKQIESNLQRIERKNQTWYS",
+        "MDAQTRRRERRAEKQAQWKAANPLLVGVSAKPVNRPIL"\
+        "SLNRKPKSRVESALNPIDLTVLAEYHKQIESNLQRIERKNQTWYS",
         "MDAQTRRRERRAEKQAQWKAAN"]
     return sequences
 

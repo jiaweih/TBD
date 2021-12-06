@@ -5,7 +5,8 @@ import pandas as pd
 import os
 import tensorflow as tf
 import sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 
+    '..')))
 import utils
 import preprocessing
 
@@ -17,16 +18,18 @@ LENGTH_LIMIT = 40
 def example_data():
     sequences = [
         "LLGDFFRKSKEKIGKEFKRIVQRIKDFLRNLVPRTES",
-        "MDAQTRRRERRAEKQAQWKAANPLLVGVSAKPVNRPILSLNRKPKSRVESALNPIDLTVLAEYHKQIESNLQRIERKNQTWYS",
+        "MDAQTRRRERRAEKQAQWKAANPLLVGVSAKPVNRPIL"\
+        "SLNRKPKSRVESALNPIDLTVLAEYHKQIESNLQRIERKNQTWYS",
         "MDAQTRRRERRAEKQAQWKAAN"]
     return sequences
 
 
 @pytest.fixture(name="input_dataframe")
 def example_dataframe():
-    df = pd.DataFrame({"sequence": ['EHVIEMDVTSENGQRALKEQSSKAKIVKNRWGRNVVQISNT',
-                                    'VYRNSRAQGGG',
-                                    'MDAQTRRRERRAEKQAQWKAANPLLVGVSAKPVNRPILSLNRKPKS']})
+    df = pd.DataFrame({"sequence": 
+            ['EHVIEMDVTSENGQRALKEQSSKAKIVKNRWGRNVVQISNT',
+             'VYRNSRAQGGG',
+             'MDAQTRRRERRAEKQAQWKAANPLLVGVSAKPVNRPILSLNRKPKS']})
     return df
 
 
@@ -40,7 +43,8 @@ def test_check_protein_letters(input_data):
 
 def test_check_protein_letters_invalid():
     sequences = [
-        "BDAQTRRRERRAEKQAQWKAANPLLVGVSAKPVNRPILSLNRKPKSRVESALNPIDLTVLAEYHKQIESNLQRIERKNQTWYB"
+        "BDAQTRRRERRAEKQAQWKAANPLLVGVSAKPVNRPILSLNR"\
+        "KPKSRVESALNPIDLTVLAEYHKQIESNLQRIERKNQTWYB"
         ]
     with pytest.raises(TypeError):
         utils.check_protein_letters(sequences)
