@@ -21,9 +21,11 @@ jobs:
         export PATH=/home/runner/miniconda3/bin:$PATH
         conda update --yes conda
         conda env create --name tbdenv -f environment.yml
-        # conda activate tbdenv
+        conda info         
+        $CONDA/bin/activate 
         conda install --yes coverage coveralls flake8
     # - name: Activate environment
+    # conda activate tbdenv
       # run: $CONDA/bin/conda init zsh
     # - name: Initialize shell
     #   run: $CONDA/bin/conda activate tbdenv
