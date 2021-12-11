@@ -22,7 +22,7 @@ jobs:
         conda update --yes conda
         conda env create --name tbdenv -f environment.yml
         conda info         
-        $CONDA/bin/activate 
+        $CONDA/bin/activate tbdenv
         conda install --yes coverage coveralls flake8
     # - name: Activate environment
     # conda activate tbdenv
