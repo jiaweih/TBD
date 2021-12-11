@@ -1,7 +1,6 @@
 import sys
 from pathlib import Path
 from setuptools import setup
-#, find_packages
 
 
 if __name__ == '__main__':
