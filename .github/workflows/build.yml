@@ -18,6 +18,7 @@ jobs:
         wget -O miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
         chmod +x miniconda.sh
         ./miniconda.sh -b
+        export PATH=/home/runner/miniconda3/bin:$PATH
         conda update --yes conda
         conda env create --name tbdenv -f environment.yml
         conda activate tbdenv
