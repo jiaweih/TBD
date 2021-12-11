@@ -14,9 +14,9 @@ jobs:
     # - name: Install dependencies
     #   run: python -m pip install .[actions] --upgrade pip
     - name: Create environment
-      run: conda env create --name tbdenv -f environment.yml
+      run: $CONDA/bin/conda env create --name tbdenv -f environment.yml
     - name: Activate environment
-      run: source activate tbdenv
+      run: $CONDA/bin/conda activate tbdenv
     - name: Install packages
       run: python setup.py install
     - name: Test with pytest
