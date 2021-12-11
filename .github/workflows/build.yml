@@ -14,15 +14,24 @@ jobs:
     # - name: Install dependencies
     #   run: python -m pip install .[actions] --upgrade pip
     - name: Create environment
-      run: $CONDA/bin/conda env create --name tbdenv -f environment.yml
-    - name: Activate environment
-      run: $CONDA/bin/conda init zsh
-    - name: Initialize shell
-      run: $CONDA/bin/conda activate tbdenv
+      run: |
+        wget -O miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+        chmod +x miniconda.sh
+        ./miniconda.sh -b
+        conda update --yes conda
+        conda env create --name tbdenv -f environment.yml
+        conda activate tbdenv
+        conda install --yes coverage coveralls flake8
+    # - name: Activate environment
+      # run: $CONDA/bin/conda init zsh
+    # - name: Initialize shell
+    #   run: $CONDA/bin/conda activate tbdenv
     - name: Install packages
       run: python setup.py install
     - name: Test with pytest
       run: pytest
+    - name: Flake
+      run: flake8
     # - name: Build package distribution
     #   if: startsWith(github.ref, 'refs/tags')
     #   run: |
