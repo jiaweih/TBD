@@ -16,6 +16,7 @@ jobs:
     - name: Create environment
       run: $CONDA/bin/conda env create --name tbdenv -f environment.yml
     - name: Activate environment
+      run: $CONDA/bin/conda init zsh
       run: $CONDA/bin/conda activate tbdenv
     - name: Install packages
       run: python setup.py install
