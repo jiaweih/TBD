@@ -16,7 +16,7 @@ jobs:
     - name: Create environment
       run: conda env create --name tbdenv -f environment.yml
     - name: Activate environment
-      run: conda activate tbdenv
+      run: source activate tbdenv
     - name: Install packages
       run: python setup.py install
     - name: Test with pytest
