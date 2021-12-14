@@ -22,7 +22,7 @@ jobs:
       run: |
         pip install flake8
         flake8
-    - name: Build package distribution
+    - name: Install dependencies
       run: pip install wheel twine
     - name: Publish package distribution to PyPI
       env:
