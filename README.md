@@ -1,3 +1,9 @@
+[![Build Status](https://app.travis-ci.com/jiaweih/TBD.svg?branch=main)](https://app.travis-ci.com/jiaweih/TBD)
+[![Coverage Status](https://coveralls.io/repos/github/jiaweih/TBD/badge.svg)](https://coveralls.io/github/jiaweih/TBD)
+[![PyPI version](https://badge.fury.io/py/TauBD.svg)](https://badge.fury.io/py/TauBD)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 # Project TBD [Tau Be Damned]
 
 -------------------------
@@ -63,8 +69,8 @@ An example to predict with the pretrained model can be found here: [example note
 
 ------------------------
 
-This project aims to be of use to the general public with interest in learning about classifying proteins, scientists determining if the protein they are working with or designed is disordered, and by those with experience in machine learning. 
- 
+This project aims to be of use to the general public with interest in learning about classifying proteins, scientists determining if the protein they are working with or designed is disordered, and by those with experience in machine learning.
+
 ![Use cases graphic](doc/use_cases.png)
 
 ## Modules Overview
@@ -83,12 +89,12 @@ This project aims to be of use to the general public with interest in learning a
 --------------------
 
  We welcome the members of open-source community to extend the functionalities of TBD, submit feature requests and report bugs.
- 
+
  ### Feature Request:
  If you would like to suggest a feature or start a discussion on possible extension of TBD, please feel free to <a href="https://github.com/Intrinsically-Disordered/TBD/issues/new">raise an issue</a>.
- 
+
  ### Bug Report:
  If you would like to report a bug, please follow <a href="https://github.com/Intrinsically-Disordered/TBD/issues/new">this link</a>.
- 
+
  ### Contributions:
  If you would to contribute to TBD, you can fork the repository, add your contribution and generate a pull request. The complete guide to make contributions can be found at this <a href="https://github.com/Intrinsically-Disordered/TBD/blob/main/CONTRIBUTIONS.md">link</a>
